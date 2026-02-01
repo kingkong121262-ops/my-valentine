@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Yashvi 💖</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  font-family: 'Arial Rounded MT Bold','Trebuchet MS',sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #ffd6e8;
+  overflow-x: hidden;
+}
+
+.page {
+  display: none;
+  min-height: 100vh;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.page.active { display: flex; }
+
+h1 {
+  color:#ff3b6f;
+  font-size: clamp(32px, 6vw, 48px);
+  margin:16px;
+}
+
+h2 {
+  color:#c9184a;
+  font-size: clamp(26px, 5vw, 40px);
+}
+
+button {
+  margin-top: 24px;
+  padding: 14px 36px;
+  font-size: clamp(18px, 4vw, 22px);
+  border: none;
+  border-radius: 30px;
+  background: #ff3b6f;
+  color: white;
+  cursor: pointer;
+}
+
+.truck {
+  font-size: clamp(64px, 12vw, 90px);
+  position: relative;
+  left: -120%;
+  animation: drive 2.5s forwards;
+  cursor: pointer;
+}
+
+@keyframes drive { to { left: 0; } }
+
+.gift {
+  font-size: clamp(72px, 14vw, 110px);
+  cursor: pointer;
+}
+
+.card-box {
+  background:#ff9aa2;
+  padding:20px;
+  border-radius:20px;
+  width:100%;
+  max-width:560px;
+  font-size: clamp(15px, 3.5vw, 18px);
+  color:#5a1a2a;
+  line-height:1.6;
+}
+
+.card-box .paper {
+  background:#ffd1dc;
+  border-radius:14px;
+  padding:20px;
+  text-align:left;
+}
+
+.card-box .paper h3 {
+  text-align:center;
+  letter-spacing:3px;
+  margin-bottom:12px;
+}
+
+.next-bottom {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+/* ---------- VALENTINE PAGE ---------- */
+
+.val-body {
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.card {
+  width:100%;
+  max-width:520px;
+  background:#ff9aa2;
+  border-radius:26px;
+  padding:40px 24px 36px;
+  text-align:center;
+  box-shadow:0 18px 45px rgba(0,0,0,0.2);
+  animation: gentlePulse 3s infinite;
+}
+
+.cat {
+  font-size: clamp(48px, 10vw, 64px);
+  margin-bottom:18px;
+  animation:bounce 2.5s infinite;
+}
+
+@keyframes bounce {
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-6px);}
+}
+
+.question {
+  font-size: clamp(18px, 4.5vw, 24px);
+  color:#5a1a2a;
+  margin-bottom:22px;
+}
+
+.buttons {
+  display:flex;
+  justify-content:space-between;
+  gap:16px;
+  flex-wrap: wrap;
+}
+
+.small {
+  width:120px;
+  height:48px;
+  border-radius:999px;
+  font-size:18px;
+}
+
+#yesBtn { background:#ff5fa2;color:white; }
+#yesBtn.active { background:#ff2f92; transform:scale(1.1); }
+#noBtn { background:#cfcfcf;color:#555;position:relative; }
+
+.hint {
+  font-size: clamp(11px, 3vw, 13px);
+  color:#5a1a2a;
+  opacity:.85;
+  margin-top:14px;
+}
+
+.flower {
+  position:fixed;
+  top:-40px;
+  font-size:32px;
+  animation:fall linear forwards;
+  pointer-events:none;
+}
+
+@keyframes fall {
+  to { transform:translateY(110vh) rotate(360deg); }
+}
+
+@keyframes gentlePulse {
+  0%,100%{transform:scale(1);}
+  50%{transform:scale(1.015);}
+}
+
+/* ---------- SMALL SCREEN FIX ---------- */
+@media (max-width: 420px) {
+  .buttons {
+    justify-content: center;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<div class="page active" id="page1">
+  <h1>THIS IS FOR YOU MY YASHU</h1>
+  <div style="font-size:70px;">🐭💋🐭</div>
+  <h2>I LOVE YOUUUU BAVV BADHUUU</h2>
+  <button onclick="goTo(2)">NEXT</button>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page" id="page2">
+  <h1>TRUCK WITH GIFTS</h1>
+  <div class="truck" onclick="goTo(3)">🚚🎁</div>
+  <p style="font-size:22px;">Click on the truck</p>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page" id="page3">
+  <div class="gift" onclick="goTo(4)">🎁💝</div>
+  <p style="font-size:24px;">Click on the gift cutie</p>
+</div>
+
+<!-- PAGE 4 — LETTER -->
+<div class="page" id="page4">
+  <div class="card-box">
+    <div class="paper">
+      <h3>________</h3>
+      <p>
+        I LOVE YOU YASHU💖<br><br>
+        Loving you feels easy, warm, and safe, like my heart finally found its home.<br>
+        Every smile of yours softens something inside me I didn’t know could melt.<br>
+        I still remember the first time our eyes met, my heart paused and chose you.<br>
+        With you, love feels honest, calm, and beautifully real.<br>
+        You’ve become my comfort, my happiest thought, my favorite place to rest.<br>
+        I adore the way you exist in my life naturally, gently, perfectly.<br>
+        Every day with you feels like a quiet miracle I never want to lose.<br>
+        I promise to keep choosing you, learning you, and loving you deeper.<br>
+        This is only the beginning and I can’t wait for all our tomorrows 💕 - Sharvil
+      </p>
+    </div>
+  </div>
+  <button class="next-bottom" onclick="goTo(5)">NEXT</button>
+</div>
+
+<!-- PAGE 5 — VALENTINE QUESTION -->
+<div class="page" id="page5">
+
+<style>
+.val-body {
+  min-height:100vh;
+  background:#ffd6e8;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.card {
+  width:520px;
+  background:#ff9aa2;
+  border-radius:26px;
+  padding:50px 34px 46px;
+  text-align:center;
+  box-shadow:0 18px 45px rgba(0,0,0,0.2);
+  animation: gentlePulse 3s infinite;
+  position:relative;
+}
+
+.cat { font-size:64px; margin-bottom:18px; animation:bounce 2.5s infinite; }
+
+@keyframes bounce {
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-6px);}
+}
+
+.question {
+  font-size:24px;
+  color:#5a1a2a;
+  margin-bottom:26px;
+}
+
+.buttons {
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.small {
+  width:120px;
+  height:48px;
+  border-radius:999px;
+  font-size:18px;
+}
+
+#yesBtn { background:#ff5fa2;color:white; }
+#yesBtn.active { background:#ff2f92; transform:scale(1.1); }
+#noBtn { background:#cfcfcf;color:#555;position:relative; }
+
+.hint {
+  font-size:12.5px;
+  color:#5a1a2a;
+  opacity:.85;
+  margin-top:14px;
+}
+
+.flower {
+  position:fixed;
+  top:-40px;
+  font-size:32px;
+  animation:fall linear forwards;
+  pointer-events:none;
+}
+
+@keyframes fall {
+  to { transform:translateY(110vh) rotate(360deg); }
+}
+
+@keyframes gentlePulse {
+  0%,100%{transform:scale(1);}
+  50%{transform:scale(1.015);}
+}
+</style>
+
+<div class="val-body">
+  <div class="card">
+    <div class="cat" id="cat">😺🌸</div>
+
+    <div class="question">
+      <span id="name"></span><br>
+      will you be my valentine?
+    </div>
+
+    <div class="buttons">
+      <button class="small" id="yesBtn">Yes</button>
+      <button class="small" id="noBtn">No</button>
+    </div>
+
+    <div class="hint">
+      "No" is very shy so be careful on what you choose, you can try your best Hottie.
+    </div>
+
+    <!-- GIF AREA (does NOT cover text) -->
+    <div id="yayGif" style="display:none;margin-top:18px;">
+      <div class="tenor-gif-embed"
+        data-postid="9239087046284004239"
+        data-share-method="host"
+        data-aspect-ratio="2.20354"
+        data-width="100%">
+      </div>
+    </div>
+
+    <!-- HIDDEN MUSIC -->
+    <iframe id="song"
+      style="display:none"
+      src="https://www.youtube.com/embed/pVi9W3OThVw?autoplay=1&clip=Ugkx8ko6y8bKj1CGeeE1QWDQazratPi7SMz3&clipt=ENnRAhjS2gQ"
+      allow="autoplay">
+    </iframe>
+
+  </div>
+</div>
+
+<script>
+const nameEl=document.getElementById('name');
+const text='Yashvi 💖'; let i=0;
+const t=setInterval(()=>{nameEl.textContent+=text[i++];if(i>=text.length)clearInterval(t);},300);
+
+const cat=document.getElementById('cat');
+setInterval(()=>{cat.textContent='😸🌸';setTimeout(()=>cat.textContent='😺🌸',300);},5000);
+
+const noBtn=document.getElementById('noBtn');
+const moves=[{x:-80,y:0},{x:80,y:0},{x:-30,y:20},{x:0,y:-60},{x:0,y:60}];
+let idx=0;
+noBtn.onmouseenter=()=>{
+  const m=moves[idx++%moves.length];
+  noBtn.style.transform=`translate(${m.x}px,${m.y}px)`;
+};
+
+document.getElementById('yesBtn').onclick=()=>{
+  const y=document.getElementById('yesBtn');
+  y.textContent='YES 😍';
+  y.classList.add('active');
+
+  document.getElementById('yayGif').style.display='block';
+  document.getElementById('song').src += '';
+
+  for(let i=0;i<40;i++){
+    setTimeout(()=>{
+      const f=document.createElement('div');
+      f.className='flower';
+      f.innerText='🌸';
+      f.style.left=Math.random()*100+'vw';
+      f.style.animationDuration=3+Math.random()*3+'s';
+      document.body.appendChild(f);
+      setTimeout(()=>f.remove(),7000);
+    },i*120);
+  }
+};
+</script>
+
+</div>
+
+<script>
+function goTo(n){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('page'+n).classList.add('active');
+}
+</script>
+
+<script async src="https://tenor.com/embed.js"></script>
+
+</body>
+</html>
